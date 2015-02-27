@@ -35,14 +35,21 @@
 		<a href="#SketchPad" data-size="30"><img src="../img/bigbrush_icon.png" alt="Big brush"/></a>
 		<a href="#SketchPad" data-size="60"><img src="../img/bucket_icon.png" alt="Huge bucket"/></a>
 		<br/>
-		<a href="#SketchPad" data-download='png' id="DownloadPng">Download .PNG</a>
+		<a href="" id="Save">Save!</a>
 		<br/>
 	</div>
 	
 	<canvas id="SketchPad" width="800" height="600" style="background: url({{artUrl}}) no-repeat center center"></canvas>
 
 	<script type="text/javascript">
-
+		// var sigCanvas = document.getElementById('SketchPad');
+	 //    var context = sigCanvas.getContext('2d'); 
+	 //    var imageObj = new Image();
+	 //    imageObj.src = "{{artUrl}}";
+	 //    imageObj.onload = function() {
+	 //    	imgObj.setAttribute('crossOrigin', 'anonymous');
+	 //       context.drawImage(this, 0, 0,sigCanvas.width,sigCanvas.width);
+	 //    };
 
 	  $(function() {
 		    $('#SketchPad').sketch();
