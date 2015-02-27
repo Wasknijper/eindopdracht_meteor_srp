@@ -1,0 +1,28 @@
+<template name="artList">
+		 <form>
+    <input type="text" name="query">
+    <input type="submit" value="Search">
+  </form>
+
+  {{#if searching}}
+    <p>Searching...</p>
+  {{else}}
+      <hr>
+      <div class="container">
+        {{#each artList}}
+          {{> artPiece}}
+        {{/each}}
+      </div>
+  {{/if}}
+
+</template>
+
+<template name="artPiece">
+	<div class="post">
+	    <a href="artlist/{{artId}}">
+	    	<img class="artImage" src="{{imgUrl}}"/>
+	      	<p>{{title}}</p>
+	      	<p>{{{creator}}}</p>
+	     </a>
+    </div>
+</template>
