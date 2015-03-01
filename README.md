@@ -1,5 +1,3 @@
-Read me nog underconstruction!
-
 # Eindopdracht Meteor Srp
 ## Teken op de kunst van het Rijksmuseum
 Voor de SRP had ik het idee om een app te maken waarmee de gebruiker een kunstwerk uit het Rijksmuseum kan kiezen en er dan een tekening op kan maken. De gebruiker kan een account aanmaken of inloggen om zo het werk op te slaan. De gemaakte afeeldingen komen op de home pagina te staan. 
