@@ -1,4 +1,4 @@
-Meteor.publish('posts', function() {
-	return Posts.find();
-});
 
+Meteor.publish('artworks', function() {
+	return Artworks.find();
+});

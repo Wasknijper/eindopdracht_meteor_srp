@@ -235,3 +235,30 @@ tr {
 {
 	box-shadow: 0px 1px 0px 0px #27ae60;
 }
+
+.col-md-3:nth-child(4n+1){
+	clear:left;
+}
+
+.containerDrawing{
+	background-size: contain;
+}
+
+.containerDrawing > img {
+	width:100%;
+	height:auto;
+}
+
+.center{ 
+ text-align: center;
+ }
+
+ .detail_img{
+ 	background-repeat: no-repeat;
+ 	background-size: contain;
+ 	background-position: center;
+ }
+
+ body .post .center-block{
+ 	float: none;
+ }

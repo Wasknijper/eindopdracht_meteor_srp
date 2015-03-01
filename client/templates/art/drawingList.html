@@ -1,17 +1,22 @@
 <template name="drawingList">
-	<div class="posts">
+	<div class="posts" id="container" >
 		{{#each drawings}}
 			{{> drawingItem}}
 		{{/each}}
 	</div>
+
 </template>
 
 <template name="drawingItem">
-	<div class="post">
-		<div class="post-content">
-			<!--<img src="{{drawing}}" />-->
-			<p> Submitted by {{userId}} 
-			</p>
-		</div>
+	<div class="post col-md-3 drawing">
+		<a href="{{pathFor 'drawingDetail'}}">
+			<div class="post-content">
+				<div class="containerDrawing" style="background: url({{artUrl}}); background-size: contain;">
+					<img src="{{drawing}}">
+				</div>
+				<p> Created by {{artistName}} 
+				</p>
+			</div>
+		</a>
 	</div>
 </template>

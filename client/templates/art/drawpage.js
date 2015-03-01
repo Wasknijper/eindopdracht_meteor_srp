@@ -17,16 +17,23 @@ Template.drawPage.helpers({
 Template.drawPage.events({  
   'click #Save': function(e) {
   	e.preventDefault();
+	var user = Meteor.user();
 
   	var savedWork = {
   		artUrl: artPiece[0].webImage.url.replace("s0", "s600"),
   		drawing: document.querySelector('#SketchPad').toDataURL(),
-  		userId: Meteor.userId()
+  		userId: Meteor.userId(),
+  		artistName: user.username,
+      submitted: new Date()
   	};
 
   	console.log('saved I hope?')
 
-  	Artworks.insert(savedWork);
+  	console.log(savedWork.drawing);
+
+    Meteor.call('insertArtwork', savedWork, function (error, drawingId) {
+      Router.go('drawingDetail', {_id:drawingId});
+    });
   	console.log(Artworks.find().count());
 
   }

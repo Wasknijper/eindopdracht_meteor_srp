@@ -1,12 +1,4 @@
-
 Session.setDefault('searching', false);
-
-// Tracker.autorun(function() {  
-//   if (Session.get('query')) {
-//     var searchHandle = Meteor.subscribe('fetchArt', Session.get('query'));
-//     Session.set('searching', ! searchHandle.ready());
-//   }
-// });
 
 Template.artList.events({  
   'submit form': function(event, template) {
@@ -14,10 +6,8 @@ Template.artList.events({
     event.preventDefault();
     var query = template.$('input[type=text]').val();
     if (query) {
-      // Meteor.call(getResults, query, function(error, response){
 
-      // })
-      var artUrl = "https://www.rijksmuseum.nl/api/nl/collection?key=tBz1zThp&format=json&imgonly=true&toppieces=true&q=" + query;
+      var artUrl = "https://www.rijksmuseum.nl/api/en/collection?key=tBz1zThp&format=json&imgonly=true&toppieces=true&q=" + query;
       Meteor.http.get(artUrl,function(err,res){
         Session.set('results', res.data.artObjects);
         Session.set('searching', false);

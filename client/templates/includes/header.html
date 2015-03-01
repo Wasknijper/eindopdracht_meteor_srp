@@ -9,12 +9,12 @@
 					 <span class="icon-bar"></span>
 					 <span class="icon-bar"></span>
 				 </button>
-				 <a class="navbar-brand" href="{{pathFor 'postsList'}}">Microscope</a>
+				 <a class="navbar-brand" href="{{pathFor 'drawingList'}}">Draw on Art</a>
 			 </div>
 			 <div class="collapse navbar-collapse" id="navigation">
 			 	<ul class="nav navbar-nav">
-			 		{{#if currentUser}}<li><a href="{{pathFor 'postSubmit'}}"> Submit Post </a></li>{{/if}}
-			 		<li><a href="{{pathFor 'artList'}}"> Art List </a> </li>
+=			 		<li><a href="{{pathFor 'artList'}}"> Make your own!</a> </li>
+			 		<!--<li><a href="{{pathFor 'postsList'}}"> Posts </a> </li> -->
 			 	</ul>
 				 <ul class="nav navbar-nav navbar-right">
 				 {{> loginButtons}}

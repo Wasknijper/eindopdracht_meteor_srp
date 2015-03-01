@@ -10,6 +10,10 @@ Meteor.methods({
 		Meteor.http.get("https://www.rijksmuseum.nl/api/nl/collection/" + artId + "/?format=jsonp&key=tBz1zThp", function(err, res){
 			 return Session.set('currentObject', res.data.artObject);
 		})
-	}
-
+	},
+	
+  	insertArtwork: function (post) {
+    return Artworks.insert(post);
+  }
 });
+

@@ -1,5 +1,5 @@
 Template.drawingList.helpers({
 	drawings: function() {
-		return Artworks.find({});
+		return Artworks.find({}, {sort: {submitted: -1}});
 	}
 }); 
