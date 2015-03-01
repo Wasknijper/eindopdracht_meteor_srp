@@ -1,2 +1,2 @@
 Meteor.subscribe('posts');
-Meteor.subscribe('artWorks');
+Meteor.subscribe('artworks');
